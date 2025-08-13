@@ -22,11 +22,17 @@ nnoremap <leader>gl :0Gclog<CR>
 Doc pr "GitHub: Make a pull request"
 nnoremap <leader>pr :!gh pr create<CR>
 
-Doc br "GitHub: Open this line in GitHub for the current branch"
-nnoremap <leader>bR :call system('gh browse -- blob/' . trim(system('git rev-parse --abbrev-ref HEAD')) . '/' . expand("%p") . '#L' . line('.')) <CR><CR>
+"Doc br "GitHub: Open this line in GitHub for the current branch"
+"nnoremap <leader>bR :call system('gh browse -- blob/' . trim(system('git rev-parse --abbrev-ref HEAD')) . '/' . expand("%p") . '#L' . line('.')) <CR><CR>
 
-Doc br "GitHub: Open this line in GitHub for the main branch"
-nnoremap <leader>br :call system('gh browse ' . expand("%p") . ':' . line('.')) <CR><CR>
+"Doc br "GitHub: Open this line in GitHub for the main branch"
+"nnoremap <leader>br :call system('gh browse ' . expand("%p") . ':' . line('.')) <CR><CR>
+
+Doc br "GitLab: Open this line in GitLab for the current branch"
+nnoremap <leader>bR :call system('open https://git.swarm.aero/swarm-development/legion/-/blob/' . trim(system('git rev-parse --abbrev-ref HEAD')) . '/' . expand("%p") . '#L' . line('.')) <CR><CR>
+
+Doc br "GitLab: Open this line in GitLab for the main branch"
+nnoremap <leader>br :call system('open https://git.swarm.aero/swarm-development/legion/-/blob/main/' . expand("%p") . '#L' . line('.')) <CR><CR>
 
 set statusline+=%{fugitive#statusline()}
 
