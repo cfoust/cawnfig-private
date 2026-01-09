@@ -6,7 +6,7 @@ let g:ale_linters = {
 \   'go': ['gopls'],
 \}
 let g:ale_hover_to_preview = 1
-let g:ale_set_quickfix = 1
+"let g:ale_set_quickfix = 1
 "let g:ale_typescript_tsserver_executable = './node_modules/typescript/bin/tsserver'
 
 " Flow error output
