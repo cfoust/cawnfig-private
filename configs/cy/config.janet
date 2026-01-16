@@ -1,6 +1,7 @@
 (key/bind :root [prefix "p"] (fn [&] (replay/open (pane/current) :copy true)))
 (param/set :root :default-frame "tiles")
-(param/set :root :animate false)
+(param/set :root :animation-fps 5)
+(param/set :root :animate true)
 (key/bind :root [prefix "a" ";"] action/set-pane-colors)
 
 (key/action
